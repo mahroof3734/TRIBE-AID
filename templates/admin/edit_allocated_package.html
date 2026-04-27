@@ -1,0 +1,51 @@
+{% extends 'admin/admin_index.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="/myapp/edit_allocated_post/">
+    {% csrf_token %}
+<input type="hidden" value="{{ data.id }}" name="id">
+  <table width="200" border="1">
+    <tr>
+      <th>District</th>
+      <td><label for="select"></label>
+        <select name="select" id="select">
+            <option value="kasargod" {% if data.district == 'kasargod' %}selected{% endif %}>kasargod</option>
+            <option value="kannur" {% if data.district == 'kannur' %}selected{% endif %}>kannur</option>
+            <option value="kozhikode" {% if data.district == 'kozhikode' %}selected{% endif %}>kozhikode</option>
+            <option value="wayanad" {% if data.district == 'wayanad' %}selected{% endif %}>wayanad</option>
+            <option value="malappuram" {% if data.district == 'malappuram' %}selected{%  endif %}>malappuram</option>
+            <option value="palakkad" {% if data.district == 'palakkad' %}selected{% endif %}>palakkad</option>
+            <option value="thrissur" {% if data.district == 'thrissur' %}selected{% endif %}>thrissur</option>
+            <option value="ernamkulam" {% if data.district == 'ernamkulam' %}selected{% endif %}>ernamkulam</option>
+            <option value="idukki" {% if data.district == 'idukki' %}selected{% endif %}>idukki</option>
+            <option value="kottayam" {% if data.district == 'kottayam' %}selected{% endif %}>kottayam</option>
+            <option value="pathanamthitta" {% if data.district == 'pathanamthitta' %}selected{% endif %}>pathanamthitta</option>
+            <option value="alappuzha" {% if data.district == 'alappuzha'%}selected{% endif %}>alappuzha</option>
+            <option value="kollam" {% if data.district == 'kollam' %}selected{% endif %}>kollam</option>
+            <option value="thiruvananthapuram" {%  if data.district == 'thiruvananthapuram' %}selected{% endif %}>thiruvananthapuram</option>
+      </select></td>
+    </tr>
+    <tr>
+      <th>Package</th>
+      <td><label for="select2"></label>
+        <select name="select2" id="select2">
+            {% for i in data2 %}
+                <option value="{{ i.id }}" {% if i.id == i.PACKAGE.id %}selected{% endif %}>{{ i.name }}</option>
+            {% endfor %}
+
+
+      </select></td>
+    </tr>
+    <tr>
+      <th>Alloted amount</th>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" value="{{ data.alloted_amount }}" required/></td>
+    </tr>
+    <tr>
+      <td><input type="submit" name="button" id="button" value="allocate"  /></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

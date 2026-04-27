@@ -1,0 +1,47 @@
+{% extends 'admin/admin_index.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/myapp/view_district_post/">
+    {% csrf_token %}
+<table  border="1">
+  <tr>
+    <td><label for="textfield2"></label>
+      <input type="text" name="textfield" id="textfield2" required/></td>
+    <td><input type="submit" name="button" id="button" value="Search" /></td>
+  </tr>
+</table>
+
+  <table class="table table-bordered" border="1">
+    <tr>
+      <th>S/no</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>DOB</th>
+      <th>Address</th>
+      <th>Working district</th>
+      <th>Contact</th>
+      <th>Photo</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ i.name }}</td>
+      <td>&nbsp;{{ i.gender }}</td>
+      <td>&nbsp;{{ i.dob }}</td>
+      <td>{{ i.place }}<br>{{ i.post }}<br>{{ i.district }}<br>{{ i.state }}<br>{{ i.pin }}&nbsp;</td>
+      <td>{{ i.workingdistrict}}&nbsp;</td>
+      <td>{{ i.email}}<br>{{ i.phone }}&nbsp;</td>
+      <td><img src="{{ i.photo }}" height="100" width="100"> &nbsp;</td>
+             <td><a href="/myapp/edit_district/{{ i.id }}#a">Edit</a></td>
+      <td><a href="/myapp/delete_district_officer/{{ i.id }}">Delete</a></td>
+
+    </tr>
+      {% endfor %}
+  </table>
+  <p>&nbsp;</p>
+</form>
+</body>
+{% endblock %}

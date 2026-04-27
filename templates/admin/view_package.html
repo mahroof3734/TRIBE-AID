@@ -1,0 +1,41 @@
+{% extends 'admin/admin_index.html' %}
+{% block body %}
+<body>
+
+
+<form id="form1" name="form1" method="post" action="/myapp/view_package_post/"><table width="200" border="1">
+    {% csrf_token %}
+<table width="200" border="1">
+  <tr>
+    <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" required/></td>
+    <td><input type="submit" name="button" id="button" value="Search" /></td>
+  </tr>
+</table>
+
+
+<table width="200" border="1">
+<tr>
+    <th>S/no</th>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Amount</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+      <th>{{ forloop.counter }}</th>
+    <td>{{ i.name }}</td>
+    <td>{{ i.type }}</td>
+    <td>{{ i.description }}</td>
+    <td>{{ i.amount }}</td>
+    <td><a href="/myapp/edit_package/{{ i.id }}#a">Edit</a></td>
+    <td><a href="/myapp/delete_package/{{ i.id }}">Delete</a></td>
+  </tr>
+       {% endfor %}
+</table>
+</form>
+</body>
+{% endblock %}

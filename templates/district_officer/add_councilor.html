@@ -1,0 +1,82 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{% extends 'district_officer/district_officer_index.html' %}
+{% block body %}
+<body>
+<form action="/myapp/add_councilor_post/" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="200" border="1">
+      {% csrf_token %}
+    <tr>
+      <th>Name</th>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield"required /></td>
+    </tr>
+    <tr>
+    <th>Gender      </th>
+    <td><p>
+      <label>
+        <input type="radio" name="RadioGroup1" value="male" id="RadioGroup1_0" />
+        male</label>
+      <br />
+      <label>
+        <input type="radio" name="RadioGroup1" value="female" id="RadioGroup1_1" />
+        female</label>
+      <br />
+      <br />
+    </p></td>
+  </tr>
+    <tr>
+      <th>DOB</th>
+      <td><label for="textfield3"></label>
+      <input type="date" name="textfield3" id="textfield3" required /></td>
+    </tr>
+    <tr>
+      <th>Phone</th>
+      <td><label for="textfield4"></label>
+      <input type="text" name="textfield4" id="textfield4" required/></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><label for="textfield5"></label>
+      <input type="text" name="textfield5" id="textfield5" required/></td>
+    </tr>
+    <tr>
+      <th>Photo</th>
+      <td><label for="fileField"></label>
+      <input type="file" name="fileField" id="fileField" required /></td>
+    </tr>
+    <tr>
+      <th>Place</th>
+      <td><label for="textfield6"></label>
+      <input type="text" name="textfield6" id="textfield6"required /></td>
+    </tr>
+    <tr>
+      <th>Post</th>
+      <td><label for="textfield7"></label>
+      <input type="text" name="textfield7" id="textfield7" required/></td>
+    </tr>
+
+    <tr>
+      <th>District</th>
+      <td><label for="textfield9"></label>
+      <input type="text" name="textfield9" id="textfield9" required/></td>
+    </tr>
+    <tr>
+      <th>State</th>
+      <td><label for="textfield10"></label>
+      <input type="text" name="textfield10" id="textfield10" required/></td>
+    </tr>
+      <tr>
+    <td colspan=""><input type="submit" name="button" id="button" value="Submit" required/></td>
+    <td>&nbsp;</td>
+  </tr>
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}

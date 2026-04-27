@@ -1,0 +1,41 @@
+{% extends 'admin/admin_index.html' %}
+{% block body %}
+
+<body>
+<form action="/myapp/add_package_post/" method="post">
+    {% csrf_token %}
+<table width="200" border="1">
+  <tr>
+    <th>Name</th>
+    <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" required/></td>
+  </tr>
+  <tr>
+    <th>type</th>
+    <td><label for="select"></label>
+        <select name="select" id="select">
+        <option value="medicine"> Medicine</option>
+        <option value="food">Food</option>
+    </select>
+    </td>
+  </tr>
+  <tr>
+    <th>Description</th>
+    <td><label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3" required /></td>
+  </tr>
+  <tr>
+    <th>Amount</th>
+    <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" required /></td>
+  </tr>
+  <tr>
+       <td>&nbsp;</td>
+
+    <td><input type="submit" name="button" id="button" value="Add" style="height: 30px" width="30px" required/></td>
+
+  </tr>
+</table>
+</form>
+</body>
+{% endblock %}

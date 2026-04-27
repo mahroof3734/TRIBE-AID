@@ -1,0 +1,44 @@
+{% extends 'councilor/councilor_index.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="view_report_post" enctype="multipart/form-data">
+{% csrf_token %}
+ <table width="200" border="1">
+    <tr>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" required /></td>
+      <td><input type="submit" name="search" id="search" value="Search"/></td>
+    </tr>
+  </table>
+  <table width="200" border="1">
+    <tr>
+      <th>Sl/no</th>
+      <th>Title</th>
+      <th>Problem</th>
+      <th>Photo</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th>TRIBE</th>
+{#      <th></th>#}
+{#      <th></th>#}
+
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ i.title }}</td>
+      <td>&nbsp;{{ i.problem }}</td>
+      <td><img src="{{ i.photo }}" width="90" height="90"></td>
+      <td>{{ i.date }}</td>
+      <td>&nbsp;{{ i.status }}</td>
+      <td>&nbsp;{{ i.TRIBE.name }}</td>
+{#      <td><a href="#">edit</a></td>#}
+{#      <td><a href="#">delete</a></td>#}
+    </tr>
+      {% endfor %}
+  </table>
+
+</form>
+</body>
+{% endblock %}
