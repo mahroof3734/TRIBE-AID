@@ -26,9 +26,29 @@ TRIBE AID aims to bridge this gap by providing a scalable web platform where tri
 
 ## Screenshots Web
 
-* Login Page
-![imahe alt](https://github.com/mahroof3734/TRIBE-AID/blob/main/login_page_website.jpeg)
-* Admin Dashboard
-* Aid Request Module
+ Login Page
+
+![image alt](https://github.com/mahroof3734/TRIBE-AID/blob/main/login_page_website.jpeg)
+
+ Admin Dashboard
+
+ ![image alt](https://github.com/mahroof3734/TRIBE-AID/blob/main/admin_home.png)
+
+ ![image alt](https://github.com/mahroof3734/TRIBE-AID/blob/main/admin_add_district_off.png)
+
+ ![image alt](https://github.com/mahroof3734/TRIBE-AID/blob/main/admin_view_dist_off.png)
+
+  ![image alt](https://github.com/mahroof3734/TRIBE-AID/blob/main/admin_add_package.png)
+
+  ![image alt](https://github.com/mahroof3734/TRIBE-AID/blob/main/admin_view_package.png)
+
+  ![image alt](https://github.com/mahroof3734/TRIBE-AID/blob/main/admin_allocate_package.png)
+
+  ![image alt](https://github.com/mahroof3734/TRIBE-AID/blob/main/admin_view_allocated_pack.png)
+
+  District Officer Dashboard
+
+  
+*  Aid Request Module
 * Volunteer Management
 * Donation Tracking System
