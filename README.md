@@ -27,7 +27,7 @@ TRIBE AID aims to bridge this gap by providing a scalable web platform where tri
 ## Screenshots Web
 
 * Login Page
-
+![imahe alt](https://github.com/mahroof3734/TRIBE-AID/blob/main/login_page_website.jpeg)
 * Admin Dashboard
 * Aid Request Module
 * Volunteer Management
