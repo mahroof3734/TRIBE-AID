@@ -1,8 +1,8 @@
 # TRIBE AID — Tribal Welfare Management Platform
 
-TRIBE AID is a centralized tribal welfare management platform developed to connect tribal communities with volunteers, donors, NGOs, and administrators through a digital ecosystem.
+TRIBE AID is a centralized tribal welfare management platform developed to connect tribal communities with volunteers, donors, NGOs and administrators through a digital ecosystem.
 
-The platform focuses on improving transparency, accessibility, and efficiency in welfare distribution by enabling aid requests, volunteer coordination, donation tracking, and administrative monitoring.
+The platform focuses on improving transparency, accessibility and efficiency in welfare distribution by enabling aid requests, volunteer coordination, donation tracking, and administrative monitoring.
 
 ---
 
